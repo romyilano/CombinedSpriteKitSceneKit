@@ -16,7 +16,7 @@
 		602C903A1B0DD5F3001EE880 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C90391B0DD5F3001EE880 /* MainScene.swift */; };
 		602C903C1B0DD610001EE880 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602C903B1B0DD610001EE880 /* SpriteKit.framework */; };
 		602C903E1B0DD615001EE880 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602C903D1B0DD615001EE880 /* SceneKit.framework */; };
-		602C90401B0DD838001EE880 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C903F1B0DD838001EE880 /* PauseScene.swift */; };
+		602C90401B0DD838001EE880 /* OverlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C903F1B0DD838001EE880 /* OverlayScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 		602C90391B0DD5F3001EE880 /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
 		602C903B1B0DD610001EE880 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		602C903D1B0DD615001EE880 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
-		602C903F1B0DD838001EE880 /* PauseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
+		602C903F1B0DD838001EE880 /* OverlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 				602C90191B0DD5B5001EE880 /* AppDelegate.swift */,
 				602C901B1B0DD5B5001EE880 /* ViewController.swift */,
 				602C90391B0DD5F3001EE880 /* MainScene.swift */,
-				602C903F1B0DD838001EE880 /* PauseScene.swift */,
+				602C903F1B0DD838001EE880 /* OverlayScene.swift */,
 				602C901D1B0DD5B5001EE880 /* Main.storyboard */,
 				602C90201B0DD5B5001EE880 /* Images.xcassets */,
 				602C90221B0DD5B5001EE880 /* LaunchScreen.xib */,
@@ -229,7 +229,7 @@
 				602C903A1B0DD5F3001EE880 /* MainScene.swift in Sources */,
 				602C901C1B0DD5B5001EE880 /* ViewController.swift in Sources */,
 				602C901A1B0DD5B5001EE880 /* AppDelegate.swift in Sources */,
-				602C90401B0DD838001EE880 /* PauseScene.swift in Sources */,
+				602C90401B0DD838001EE880 /* OverlayScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +427,7 @@
 				602C90351B0DD5B5001EE880 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		602C90361B0DD5B5001EE880 /* Build configuration list for PBXNativeTarget "CombinedSpriteKitSceneKitTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +436,7 @@
 				602C90381B0DD5B5001EE880 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

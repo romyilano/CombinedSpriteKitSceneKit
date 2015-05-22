@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class PauseScene: SKScene {
+class OverlayScene: SKScene {
     
     var pauseNode: SKSpriteNode!
     var scoreNode: SKLabelNode!

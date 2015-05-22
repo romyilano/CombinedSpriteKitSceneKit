@@ -12,7 +12,7 @@ import SceneKit
 class ViewController: UIViewController {
     
     var sceneView: SCNView!
-    var spriteScene: PauseScene!
+    var spriteScene: OverlayScene!
     
     override func viewDidLoad() {
         super.viewDidLoad()
