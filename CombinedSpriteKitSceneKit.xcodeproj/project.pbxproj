@@ -13,6 +13,10 @@
 		602C90211B0DD5B5001EE880 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 602C90201B0DD5B5001EE880 /* Images.xcassets */; };
 		602C90241B0DD5B5001EE880 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602C90221B0DD5B5001EE880 /* LaunchScreen.xib */; };
 		602C90301B0DD5B5001EE880 /* CombinedSpriteKitSceneKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C902F1B0DD5B5001EE880 /* CombinedSpriteKitSceneKitTests.swift */; };
+		602C903A1B0DD5F3001EE880 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C90391B0DD5F3001EE880 /* MainScene.swift */; };
+		602C903C1B0DD610001EE880 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602C903B1B0DD610001EE880 /* SpriteKit.framework */; };
+		602C903E1B0DD615001EE880 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602C903D1B0DD615001EE880 /* SceneKit.framework */; };
+		602C90401B0DD838001EE880 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C903F1B0DD838001EE880 /* PauseScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		602C90291B0DD5B5001EE880 /* CombinedSpriteKitSceneKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombinedSpriteKitSceneKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		602C902E1B0DD5B5001EE880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		602C902F1B0DD5B5001EE880 /* CombinedSpriteKitSceneKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedSpriteKitSceneKitTests.swift; sourceTree = "<group>"; };
+		602C90391B0DD5F3001EE880 /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
+		602C903B1B0DD610001EE880 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		602C903D1B0DD615001EE880 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		602C903F1B0DD838001EE880 /* PauseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				602C903E1B0DD615001EE880 /* SceneKit.framework in Frameworks */,
+				602C903C1B0DD610001EE880 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +69,8 @@
 		602C900B1B0DD5B5001EE880 = {
 			isa = PBXGroup;
 			children = (
+				602C903D1B0DD615001EE880 /* SceneKit.framework */,
+				602C903B1B0DD610001EE880 /* SpriteKit.framework */,
 				602C90161B0DD5B5001EE880 /* CombinedSpriteKitSceneKit */,
 				602C902C1B0DD5B5001EE880 /* CombinedSpriteKitSceneKitTests */,
 				602C90151B0DD5B5001EE880 /* Products */,
@@ -79,6 +91,8 @@
 			children = (
 				602C90191B0DD5B5001EE880 /* AppDelegate.swift */,
 				602C901B1B0DD5B5001EE880 /* ViewController.swift */,
+				602C90391B0DD5F3001EE880 /* MainScene.swift */,
+				602C903F1B0DD838001EE880 /* PauseScene.swift */,
 				602C901D1B0DD5B5001EE880 /* Main.storyboard */,
 				602C90201B0DD5B5001EE880 /* Images.xcassets */,
 				602C90221B0DD5B5001EE880 /* LaunchScreen.xib */,
@@ -212,8 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				602C903A1B0DD5F3001EE880 /* MainScene.swift in Sources */,
 				602C901C1B0DD5B5001EE880 /* ViewController.swift in Sources */,
 				602C901A1B0DD5B5001EE880 /* AppDelegate.swift in Sources */,
+				602C90401B0DD838001EE880 /* PauseScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +359,7 @@
 				INFOPLIST_FILE = CombinedSpriteKitSceneKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -353,6 +370,7 @@
 				INFOPLIST_FILE = CombinedSpriteKitSceneKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
