@@ -21,9 +21,6 @@ class ViewController: UIViewController {
         self.sceneView = SCNView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
         self.sceneView.scene = MainScene()
         self.view.addSubview(self.sceneView)
-        
-        let tapRecogniser = UITapGestureRecognizer(target: self, action: "sceneViewTapped:")
-        self.sceneView.addGestureRecognizer(tapRecogniser)
     }
 
     override func didReceiveMemoryWarning() {

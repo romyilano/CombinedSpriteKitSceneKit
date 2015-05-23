@@ -44,7 +44,26 @@ class OverlayScene: SKScene {
         super.init(coder: aDecoder)
     }
     
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        //println(touches)
+    }
+    
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        let touch = touches.first as? UITouch
+        println("TOUCH ENDED")
+        let location = touch?.locationInNode(self)
+        
+        if self.pauseNode.containsPoint(location!) {
+            if !paused {
+                self.pauseNode.texture = SKTexture(imageNamed: "Play Button")
+            }
+            else {
+                self.pauseNode.texture = SKTexture(imageNamed: "Pause Button")
+            }
+            
+            self.paused = !self.paused
+        }
         
     }
 }
