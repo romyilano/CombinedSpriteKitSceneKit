@@ -61,7 +61,9 @@ class MainScene: SCNScene {
     }
     
     func rotateCube() {
-        let vector = self.cubeNode.eulerAngles
-        self.cubeNode.eulerAngles = SCNVector3(x: vector.x, y: (vector.y + 0.01), z: vector.z)
+        if !self.paused {
+            let vector = self.cubeNode.eulerAngles
+            self.cubeNode.eulerAngles = SCNVector3(x: vector.x, y: (vector.y + 0.01), z: vector.z)
+        }
     }
 }
