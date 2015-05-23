@@ -43,8 +43,4 @@ class OverlayScene: SKScene {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
-        
-    }
 }
