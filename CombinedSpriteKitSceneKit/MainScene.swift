@@ -23,6 +23,7 @@ class MainScene: SCNScene {
         cubeMaterial.diffuse.contents = UIColor.blueColor()
         cube.materials = [cubeMaterial]
         self.cubeNode = SCNNode(geometry: cube)
+        self.cubeNode.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 0.01, z: 0, duration: 1.0/60.0)))
         
         let camera = SCNCamera()
         camera.xFov = 60
@@ -51,19 +52,9 @@ class MainScene: SCNScene {
         self.rootNode.addChildNode(self.cubeNode)
         self.rootNode.addChildNode(self.cameraNode)
         self.rootNode.addChildNode(self.lightNode)
-        
-        let displayLink = CADisplayLink(target: self, selector: "rotateCube")
-        displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
     }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    }
-    
-    func rotateCube() {
-        if !self.paused {
-            let vector = self.cubeNode.eulerAngles
-            self.cubeNode.eulerAngles = SCNVector3(x: vector.x, y: (vector.y + 0.01), z: vector.z)
-        }
     }
 }
