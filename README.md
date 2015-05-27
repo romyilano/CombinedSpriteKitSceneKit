@@ -1,7 +1,7 @@
-### Tuts+ Tutorial: Utilising SpriteKit content within SceneKit
+### Tuts+ Tutorial: Combining the Power of SpriteKit and SceneKit
 
 #### Instructor: Davis Allie
 
-In this tutorial you will learn how to layer SpriteKit content on top of a SceneKit scene. I will also show you how to create dynamic SceneKit materials by using SpriteKit scenes.
+SpriteKit and SceneKit are iOS frameworks designed to make it easy for developers to create 2D and 3D assets in casual games. In this tutorial, I will show you how to combine content created in both frameworks into a single view to utilize the APIs that Apple has made available.
 
-Source files for the Tuts+ tutorial: [Utilising SpriteKit content within SceneKit](http://code.tutsplus.com/tutorials/utilising-spritekit-content-within-scenekit--cms-24049)
+Source files for the starter project of the Tuts+ tutorial: [Combining the Power of SpriteKit and SceneKit](http://code.tutsplus.com/tutorials/combining-the-power-of-spritekit-and-scenekit--cms-24049)
