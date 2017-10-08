@@ -58,4 +58,11 @@ class MainScene: SCNScene {
     required init(coder aDecoder: NSCoder) {
         fatalError()
     }
+    
+    //MARK: - KVO
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "paused" {
+            isPaused = change![NSKeyValueChangeKey.newKey] as! Bool
+        }
+    }
 }
