@@ -19,7 +19,21 @@ class MainScene: SCNScene {
     override init() {
         super.init()
         
+        let cube = SCNBox.init(width: 3, height: 3, length: 3, chamferRadius: 0)
         
+        let materialScene = SKScene(size: CGSize(width: 100, height: 100))
+        let backgroundNode = SKSpriteNode(color: .blue, size: materialScene.size.height/2.0)
+        backgroundNode.position = CGPoint(x: materialScene.size.width/2.0, y: materialScene.size.height/2.0)
+        materialScene.addChild(backgroundNode)
+        
+        let blueAction = SKAction.colorize(with: .blue, colorBlendFactor: 1, duration: 1)
+        let redAction = SKAction.colorize(with: .red, colorBlendFactor: 1, duration: 1)
+        let greenAction = SKAction.colorize(with: .green, colorBlendFactor: 1, duration: 1)
+        backgroundNode.runAction(SKAction.repeatActionForever(SKAction.sequence[blueAction, redAction, greenAction]))
+        
+        let cubeMaterial = SCNMaterial()
+        cubeMaterial.diffuse.contents =
+
     }
 
     required init(coder aDecoder: NSCoder) {

@@ -1,6 +1,22 @@
-### Tuts+ Tutorial: Combining the Power of SpriteKit and SceneKit
+# Tuts+ Tutorial: Combining the Power of SpriteKit and SceneKit
 
 * https://code.tutsplus.com/tutorials/combining-the-power-of-spritekit-and-scenekit--cms-24049
+
+
+## Tips 
+
+### Use overlaySKScene to add SpriteKit to SceneKit
+
+* "The SpriteKit overlay goes on the SceneKit view not on the SceneKit scene" - [stackOverflow troubleshooting](https://stackoverflow.com/questions/34584257/how-can-i-overlay-a-skscene-over-a-scnscene-in-swift)
+* [How to create an HUD overlay on a sceneKitScene](https://stackoverflow.com/questions/24419193/how-do-i-create-a-hud-on-top-of-my-scenekit-scene)
+
+* SCNSceneRenderer property [overlaySKScene](https://developer.apple.com/documentation/scenekit/scnscenerenderer/1524051-overlayskscene)
+
+	_Use this property to render 2D content that overlays your scene—for example, a heads-up-display for a game. The Sprite Kit scene shares the same underlying GPU resources as the SceneKit renderer, so using this property can provide much better performance than overlaying other views or layers above the view rendering your SceneKit content._
+
+
+
+---
 
 #### Instructor: Davis Allie
 
