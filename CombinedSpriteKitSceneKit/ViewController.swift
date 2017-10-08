@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         sceneView.overlaySKScene = spriteScene
         self.view.addSubview(self.sceneView)
         
-        spriteScene.addObserver(sceneView.scene!, forKeyPath: "paused", options: .New, context: nil)
+        spriteScene.addObserver(sceneView.scene!, forKeyPath: "paused", options: .new, context: nil)
     }
 
     override func didReceiveMemoryWarning() {
