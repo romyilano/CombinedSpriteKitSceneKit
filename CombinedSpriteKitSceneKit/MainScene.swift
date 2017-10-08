@@ -18,12 +18,25 @@ class MainScene: SCNScene {
     
     override init() {
         super.init()
-        let cube = SCNBox(width: 3, height: 3, length: 3, chamferRadius: 0)
+
+        let cube = SCNBox.init(width: 3, height: 3, length: 3, chamferRadius: 0)
+        let materialScene = SKScene(size: CGSize(width: 100, height: 100))
+        let backgroundNode = SKSpriteNode(color: .blue, size: materialScene.size)
+        backgroundNode.position = CGPoint(x: materialScene.size.width / 2.0, y: materialScene.size.height / 2.0)
+        materialScene.addChild(backgroundNode)
+        
+        let blueAction = SKAction.colorize(with: .blue, colorBlendFactor: 1, duration: 1)
+        let redAction = SKAction.colorize(with: .red, colorBlendFactor: 1, duration: 1)
+        let greenAction = SKAction.colorize(with: .green, colorBlendFactor: 1, duration: 1)
+        
+        backgroundNode.run(SKAction.repeatForever(SKAction.sequence([blueAction, redAction, greenAction])))
+        
         let cubeMaterial = SCNMaterial()
-        cubeMaterial.diffuse.contents = UIColor.blue
+        cubeMaterial.diffuse.contents = materialScene
         cube.materials = [cubeMaterial]
-        self.cubeNode = SCNNode(geometry: cube)
-        self.cubeNode.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 0.01, z: 0, duration: 1.0/60.0)))
+        
+        cubeNode = SCNNode(geometry: cube)
+        cubeNode.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 0.01, z: 0, duration: 1.0/60.0)))
         
         let camera = SCNCamera()
         camera.xFov = 60
