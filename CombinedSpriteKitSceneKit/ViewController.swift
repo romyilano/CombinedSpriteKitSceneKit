@@ -31,5 +31,17 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let location = touches.first?.location(in: sceneView) {
+            let hitResults = sceneView.hitTest(location, options: nil)
+            
+            hitResults.forEach {
+                if $0.node == (sceneView.scene as! MainScene).cubeNode {
+                    self.spriteScene.score += 1
+                }
+            }
+        }
+    }
 }
 
