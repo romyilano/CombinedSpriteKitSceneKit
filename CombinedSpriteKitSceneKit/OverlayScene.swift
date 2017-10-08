@@ -23,7 +23,7 @@ class OverlayScene: SKScene {
     override init(size: CGSize) {
         super.init(size: size)
         
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
         
         let spriteSize = size.width/12
         self.pauseNode = SKSpriteNode(imageNamed: "Pause Button")
@@ -32,7 +32,7 @@ class OverlayScene: SKScene {
         
         self.scoreNode = SKLabelNode(text: "Score: 0")
         self.scoreNode.fontName = "DINAlternate-Bold"
-        self.scoreNode.fontColor = UIColor.blackColor()
+        self.scoreNode.fontColor = UIColor.black
         self.scoreNode.fontSize = 24
         self.scoreNode.position = CGPoint(x: size.width/2, y: self.pauseNode.position.y - 9)
         

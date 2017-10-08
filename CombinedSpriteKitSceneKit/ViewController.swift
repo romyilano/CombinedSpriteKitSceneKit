@@ -11,8 +11,8 @@ import SceneKit
 
 class ViewController: UIViewController {
     
-    var sceneView: SCNView!
-    var spriteScene: OverlayScene!
+    @objc var sceneView: SCNView!
+    @objc var spriteScene: OverlayScene!
     
     override func viewDidLoad() {
         super.viewDidLoad()
